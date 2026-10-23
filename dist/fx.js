@@ -68,10 +68,17 @@
     lastY = y;
 
     if (reduced) return;
+    // Parallax is desktop-only: on phones it pushes stacked content into its neighbours.
+    const parallaxOn = window.innerWidth > 760;
     document.querySelectorAll('[data-parallax]').forEach(el => {
+      if (!parallaxOn) { if (el._py) { el._py = 0; el.style.removeProperty('--py'); } return; }
       const r = el.getBoundingClientRect();
       if (r.bottom < -200 || r.top > vh + 200) return;
-      const offset = (r.top + r.height / 2 - vh / 2) * parseFloat(el.dataset.parallax);
+      const k = parseFloat(el.dataset.parallax);
+      const center = r.top + r.height / 2 - (el._py || 0); // untranslated position
+      // Elements visible on load start at rest and drift as you scroll; others are centred on the viewport.
+      const offset = center + y < vh ? -y * k : (center - vh / 2) * k;
+      el._py = offset;
       el.style.setProperty('--py', `${offset.toFixed(1)}px`);
     });
     scrub.forEach(({ el, words }) => {

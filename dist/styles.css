@@ -329,3 +329,75 @@ body.viewer-open{overflow:hidden}
   .marquee-track,.phone-track,.element-tile,.thesis-atomy,.ep-cover-spark,.marquee i,.ep-cover-cue .round-icon{animation:none!important}
   .scrub-word{opacity:1}
 }
+
+/* ==========================================================================
+   Phone readability pass: minimum label size, stacked meta lines, and
+   flow layouts instead of absolutely positioned compositions.
+   ========================================================================== */
+@media(max-width:760px){
+  /* 1. Nothing below 11px. Labels keep their small-caps style but become readable. */
+  .hero-kicker,.hero-bottom,.section-topline,.eyebrow,.art-topline,.art-footnote,.poster-small,.plate-diagram span,
+  .work-bottom,.work-bottom a,.about-small,.field-range,.episode-number,.cap-number,.education-line>span,.hero-credential,
+  .portrait-caption,.site-footer>span,.copyright,.detail-metadata dt,.detail-next p,.thesis-stats dt,.e-num,.team-copy dt,
+  .ep-cover-top,.episode-toc small,.manifesto-list span,.viewer-eyebrow{font-size:11px!important;letter-spacing:.06em!important;line-height:1.5!important}
+  .tags span,.open-meta,.copy-status,.element-tile span,.element-tile small{font-size:11px!important}
+  .hero-credential span,.education-line p,.detail-metadata dd,.detail-back,.copy-email,.site-footer>a:not(.footer-name),
+  .detail-hero figcaption,.detail-source,.header-contact,.chapter-official,.ep-cover-cue,.round-link,.text-link,.hero-right>p{font-size:13px!important}
+
+  /* 2. Two-part meta lines stack instead of squeezing side by side. */
+  .hero-kicker,.hero-bottom,.section-topline,.ep-cover-top,.work-bottom{flex-direction:column;align-items:flex-start!important;gap:4px!important}
+  .section-topline>span:last-child,.ep-cover-top span:last-child,.hero-kicker span:last-child{text-align:left!important;max-width:none!important;opacity:.7}
+  .work-bottom>span,.work-bottom a{max-width:none!important;text-align:left!important}
+  .hero-bottom a{gap:10px}
+  .art-footnote{padding-right:48px}
+  .plate-diagram{gap:6px}
+
+  /* 3. Hero: a simple top-to-bottom stack. */
+  .hero-kicker{padding-top:18px}
+  .hero-composition{height:auto!important;display:flex;flex-direction:column}
+  .hero-left{position:relative;max-width:none!important;padding-top:20px!important}
+  .hero-statement{max-width:none!important;font-size:34px!important}
+  .hero-portrait{position:relative;top:auto!important;left:auto!important;transform:none!important;align-self:center;width:min(440px,118vw)!important;max-width:none;height:500px;overflow:hidden;margin-top:18px}
+  .hero-portrait img{margin-top:-46%}
+  .contact-portrait img{margin-top:-28%}
+  .hero-right{position:relative!important;top:auto!important;left:auto!important;width:100%!important;padding:18px 0!important;gap:8px 16px!important}
+  .hero-right>p em{font-size:24px!important}
+  .portrait-caption{position:relative!important;bottom:auto!important;padding:0 0 18px;max-width:none!important}
+  .hero-bottom{padding:16px 0!important}
+
+  /* 4. Contact: same idea — note, photo, then actions. */
+  .contact-display{margin-inline:0!important;font-size:16.4vw!important}
+  .contact-composition{height:auto!important;display:flex;flex-direction:column}
+  .contact-note{position:relative;padding-top:20px!important}
+  .contact-portrait{position:relative!important;top:auto!important;left:auto!important;transform:none!important;align-self:center;width:min(420px,112vw)!important;height:480px;overflow:hidden;margin-top:18px}
+  .contact-action{position:relative!important;top:auto!important;grid-template-columns:1fr!important;gap:12px!important;padding:22px 0 26px!important}
+  .contact-action>p{font-size:14px!important}
+  .contact-action .copy-email,.copy-status{grid-column:1!important}
+  .contact-button{justify-content:space-between}
+  .site-footer{gap:10px 16px;padding:24px 0}
+
+  /* 5. Case-study metadata: one row per item. */
+  .detail-metadata{grid-template-columns:1fr;gap:10px}
+  .detail-metadata>div{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:baseline}
+  .detail-metadata dt{margin:0}
+
+  /* 6. Episodes cover: "FS 1" sits in the flow above the title instead of behind it. */
+  .ep-cover-inner{gap:28px}
+  .ep-cover-fs{position:relative;top:auto;right:auto;margin:10px 0 4px;font-size:36vw;line-height:.9;-webkit-text-stroke-width:1.2px}
+  .ep-cover-spark{top:auto;bottom:34px;width:46px;height:46px}
+  .ep-cover-meta p{font-size:15px}
+  .chapter-side .eyebrow{max-width:180px}
+
+  /* 7. Small spacing touches. */
+  .field-group>summary{padding:18px 0}
+  .field-range{min-width:58px}
+  .episode-list{padding-left:0}
+  .capability{grid-template-columns:28px 1fr 23px}
+  .thesis-intro .eyebrow,.compilation-copy .eyebrow{max-width:280px}
+}
+@media(max-width:380px){
+  .hero-statement{font-size:30px!important}
+  .hero-portrait{height:460px}
+  .contact-portrait{height:460px}
+  .detail-metadata>div{grid-template-columns:110px 1fr}
+}
