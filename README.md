@@ -13,7 +13,11 @@ Run `npm run build` to verify JavaScript syntax, local references, section ancho
 - `dist/index.html`: portfolio homepage.
 - `dist/work.html` and `dist/work.js`: four artifact/field-note stories.
 - `dist/styles.css`: palette, typography, layout, and responsive/reduced-motion behavior.
-- `dist/app.js`: navigation, field-note disclosure groups, copy-email action, and progressive reveals.
+- `dist/app.js`: navigation, field-note disclosure groups, and copy-email action.
+- `dist/fx.js`: shared motion layer (scroll progress, reveals, split-word headings, parallax, magnetic buttons, card tilt, cursor, counters). Respects reduced-motion.
+- `dist/episodes.html` and `dist/episodes.js`: Field Study 1 compilation — cover, manifesto, and an opener (reflection + quote) for each of the 16 episodes, with an in-page PDF viewer.
+- `dist/assets/episodes/`: the 16 episode PDFs.
+- `dist/assets/thesis/`: Periodic Table Explorer logo, mascots, and team photo (from the thesis app).
 - `dist/assets/`: original supplied portraits, two extracted coursework graphics, favicon, and locally served fonts.
 - `.openai/hosting.json`: Sites identity and static-directory configuration.
 

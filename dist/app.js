@@ -27,7 +27,7 @@ const groups = [
 
 const groupRoot = document.querySelector('#field-groups');
 if (groupRoot) {
-  groupRoot.innerHTML = groups.map(g => `<details class="field-group"><summary><span class="field-range">${g.range}</span><h3>${g.title}</h3><span class="field-plus" aria-hidden="true">+</span></summary><ol class="episode-list">${g.episodes.map(([n,title,body]) => `<li class="episode" value="${n}"><span class="episode-number">EPISODE ${String(n).padStart(2,'0')}</span><h4>${title}</h4><p>${body}</p></li>`).join('')}</ol></details>`).join('');
+  groupRoot.innerHTML = groups.map(g => `<details class="field-group"><summary><span class="field-range">${g.range}</span><h3>${g.title}</h3><span class="field-plus" aria-hidden="true">+</span></summary><ol class="episode-list">${g.episodes.map(([n,title,body]) => `<li class="episode" value="${n}"><a href="episodes.html#episode-${String(n).padStart(2,'0')}"><span class="episode-number">EPISODE ${String(n).padStart(2,'0')}</span><h4>${title} <span aria-hidden="true">↗</span></h4><p>${body}</p></a></li>`).join('')}</ol></details>`).join('');
 }
 
 const menuButton = document.querySelector('.menu-toggle');
@@ -55,17 +55,6 @@ document.addEventListener('keydown', event => {
 });
 window.matchMedia('(min-width:761px)').addEventListener('change', closeMenu);
 
-const reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-if (!reducedMotion && 'IntersectionObserver' in window) {
-  document.documentElement.classList.add('motion-ready');
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-}
-
 if ('IntersectionObserver' in window) {
   const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -76,7 +65,7 @@ if ('IntersectionObserver' in window) {
       });
     }
   }), { rootMargin: '-15% 0px -60% 0px' });
-  document.querySelectorAll('#work,#approach,#about').forEach(el => navObserver.observe(el));
+  document.querySelectorAll('#work,#thesis,#approach,#about').forEach(el => navObserver.observe(el));
 }
 
 document.querySelector('[data-copy-email]')?.addEventListener('click', async () => {

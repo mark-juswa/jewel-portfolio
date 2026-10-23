@@ -16,33 +16,37 @@
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script src="fx.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header wrap">
     <a class="wordmark" href="#" aria-label="Jewel Octa, home">jewel<span class="wordmark-dot">.</span></a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#work">Selected work <span>01</span></a>
-      <a href="#approach">My approach <span>02</span></a>
-      <a href="#about">About me <span>03</span></a>
+      <a href="#thesis">Thesis <span>02</span></a>
+      <a href="#approach">My approach <span>03</span></a>
+      <a href="#about">About me <span>04</span></a>
+      <a href="episodes.html">Field study <span>16</span></a>
     </nav>
-    <a class="header-contact" href="mailto:jewelbocta09@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
+    <a class="header-contact" href="mailto:jewelbocta09@gmail.com" data-magnetic>Let's connect <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#work">Selected work <span>01</span></a><a href="#approach">My approach <span>02</span></a><a href="#about">About me <span>03</span></a><a href="#contact">Let's connect <span>↗</span></a>
+      <a href="#work">Selected work <span>01</span></a><a href="#thesis">Thesis project <span>02</span></a><a href="#approach">My approach <span>03</span></a><a href="#about">About me <span>04</span></a><a href="episodes.html">Field study episodes <span>16</span></a><a href="#contact">Let's connect <span>↗</span></a>
     </nav>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-kicker wrap"><span>A PERSONAL PORTFOLIO</span><span>SCIENCE. LEARNING. POSSIBILITY.</span></div>
-      <h1 id="hero-title" class="hero-name">JEWEL OCTA<span class="sr-only"> — Science Education student</span></h1>
+      <h1 id="hero-title" class="hero-name" data-parallax="0.22">JEWEL OCTA<span class="sr-only"> — Science Education student</span></h1>
       <div class="hero-composition wrap">
         <div class="hero-left">
           <span class="eyebrow">HELLO, I'M JEWEL B. OCTA</span>
           <p class="hero-statement">A curious mind.<br>A heart for<br><em>meaningful learning.</em></p>
-          <a class="round-link" href="#work"><span class="round-icon" aria-hidden="true">↘</span><span>Explore my work</span></a>
+          <a class="round-link" href="#work" data-magnetic><span class="round-icon" aria-hidden="true">↘</span><span>Explore my work</span></a>
         </div>
-        <div class="hero-portrait"><img src="assets/myimage1.png" alt="Jewel Octa seated and smiling" width="1080" height="1920" fetchpriority="high"></div>
+        <div class="hero-portrait" data-parallax="-0.06"><img src="assets/myimage1.png" alt="Jewel Octa seated and smiling" width="1080" height="1920" fetchpriority="high"></div>
         <div class="hero-right">
           <svg class="spark" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66"/></svg>
           <p>Learning to make<br><em>science meaningful.</em></p>
@@ -53,13 +57,15 @@
       <div class="hero-bottom wrap"><span>CAMARINES NORTE, PHILIPPINES</span><a href="#work">A FEW THINGS I'VE EXPLORED <span aria-hidden="true">↓</span></a></div>
     </section>
 
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>CURIOSITY</span><i>✳</i><span><em>science</em></span><i>✳</i><span>REFLECTION</span><i>✳</i><span><em>meaningful learning</em></span><i>✳</i><span>GROWTH</span><i>✳</i><span><em>periodic table explorer</em></span><i>✳</i><span>CURIOSITY</span><i>✳</i><span><em>science</em></span><i>✳</i><span>REFLECTION</span><i>✳</i><span><em>meaningful learning</em></span><i>✳</i><span>GROWTH</span><i>✳</i><span><em>periodic table explorer</em></span><i>✳</i></div></div>
+
     <section id="work" class="work-section section-dark" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-topline"><span>01 / SELECTED LEARNING ARTIFACTS</span><span>IDEAS, OBSERVATIONS & REFLECTIONS</span></div>
-        <div class="ruled-heading reveal"><span class="heading-rule"></span><h2 id="work-title">Small explorations.<br><em>Meaningful discoveries.</em></h2><span class="heading-rule"></span></div>
+        <div class="ruled-heading reveal"><span class="heading-rule"></span><h2 id="work-title" data-split>Small explorations.<br><em>Meaningful discoveries.</em></h2><span class="heading-rule"></span></div>
 
         <article class="project project-board reveal">
-          <a class="project-art board-art" href="work.html?project=classroom-board" aria-label="Explore A place to belong, classroom board proposal">
+          <a class="project-art board-art" data-tilt data-cursor="View" href="work.html?project=classroom-board" aria-label="Explore A place to belong, classroom board proposal">
             <div class="art-topline"><span>CLASSROOM COMMUNICATION</span><span>01</span></div>
             <div class="board-print"><img src="assets/classroom-board.jpg" alt="Colorful proposed classroom board with reminders, announcements, classroom rules, and encouragement" width="920" height="600" loading="lazy"></div>
             <span class="art-footnote">A WELCOMING SPACE FOR EVERYDAY LEARNING</span>
@@ -72,7 +78,7 @@
         </article>
 
         <article class="project project-science reveal">
-          <a class="project-art science-art" href="work.html?project=science-questioning" aria-label="Read Beyond the textbook, a science questioning study">
+          <a class="project-art science-art" data-tilt data-cursor="Read" href="work.html?project=science-questioning" aria-label="Read Beyond the textbook, a science questioning study">
             <div class="art-topline"><span>AN OBSERVATION IN SCIENCE LEARNING</span><span>02</span></div>
             <div class="science-poster"><span class="poster-small">IT STARTS WITH A QUESTION.</span><div class="poster-question">What happens<br>when we ask<br><em>“why?”</em></div><div class="plate-diagram" aria-hidden="true"><svg viewBox="0 0 540 110"><path d="M20 77h180l55-30v47H20zM520 77H340l-55-30v47h235z"/><path class="plate-line" d="M110 32h80m-16-12 16 12-16 12M430 32h-80m16-12-16 12 16 12"/></svg><span>OBSERVE</span><span>QUESTION</span><span>CONNECT</span></div></div>
             <span class="image-arrow" aria-hidden="true">↗</span>
@@ -84,16 +90,85 @@
         </article>
 
         <article class="project project-community reveal">
-          <a class="community-art" href="work.html?project=home-school-community" aria-label="Explore Together, they shape us, a visual reflection"><img src="assets/home-school-community.png" alt="Together, They Shape Me: a visual reflection connecting home, school, and community" width="948" height="632" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></a>
+          <a class="community-art" data-tilt data-cursor="View" href="work.html?project=home-school-community" aria-label="Explore Together, they shape us, a visual reflection"><img src="assets/home-school-community.png" alt="Together, They Shape Me: a visual reflection connecting home, school, and community" width="948" height="632" loading="lazy"><span class="image-arrow" aria-hidden="true">↗</span></a>
           <div class="community-copy"><span class="eyebrow">03 / VISUAL REFLECTION</span><h3>Together,<br><em>they shape us.</em></h3><p>Learning extends beyond the classroom. A visual reflection on the people and places that help a learner grow.</p><a class="text-link" href="work.html?project=home-school-community">See the reflection <span aria-hidden="true">↗</span></a></div>
         </article>
-        <div class="work-bottom"><span>A SELECTION FROM MY FIELD STUDY JOURNEY</span><a href="#field-notes">Explore all 16 learning episodes <span aria-hidden="true">↗</span></a></div>
+        <div class="work-bottom"><span>A SELECTION FROM MY FIELD STUDY JOURNEY</span><a href="episodes.html">Explore all 16 learning episodes <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="thesis" class="thesis-section" aria-labelledby="thesis-title">
+      <div class="wrap">
+        <div class="section-topline"><span>02 / THESIS PROJECT</span><span>A MOBILE APP FOR SCIENCE LEARNING</span></div>
+        <div class="thesis-hero">
+          <div class="thesis-intro">
+            <img class="thesis-icon reveal" src="assets/thesis/app-icon.jpg" alt="Periodic Table Explorer app icon: Atomy the mascot holding a magnifying glass beside a gold element tile" width="640" height="640" loading="lazy">
+            <span class="eyebrow">UNDERGRADUATE THESIS · SCIENCE EDUCATION RESEARCH TEAM</span>
+            <h2 id="thesis-title" data-split>Periodic Table<br><em>Explorer.</em></h2>
+            <p class="thesis-lead reveal">Have you ever wondered why elements are arranged the way they are? Our thesis answers with a mobile app: a guided, 5E-based journey through periods, groups, atomic structure and reactivity — led by Atomy, our mascot.</p>
+            <div class="tags reveal"><span>5E instructional model</span><span>React Native · Expo</span><span>Supabase</span><span>Gamified learning</span></div>
+            <a class="text-link reveal" href="work.html?project=periodic-table-explorer">Read the thesis case study <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="thesis-stage">
+            <div class="element-tile tile-h" data-parallax="-0.2" aria-hidden="true"><small>1</small><b>H</b><span>Hydrogen</span></div>
+            <div class="element-tile tile-au" data-parallax="-0.32" aria-hidden="true"><small>79</small><b>Au</b><span>Gold</span></div>
+            <div class="element-tile tile-fe" data-parallax="-0.12" aria-hidden="true"><small>26</small><b>Fe</b><span>Iron</span></div>
+            <div class="phone" data-tilt role="img" aria-label="The app's Your Journey screen with five learning stages: Engage, Explore, Explain, Elaborate and Evaluate">
+              <div class="phone-screen">
+                <div class="phone-status" aria-hidden="true"><span>9:41</span><span>● ● ▮</span></div>
+                <div class="phone-head" aria-hidden="true"><small>PERIODIC TABLE EXPLORER</small><b>Your<br>Journey</b><span class="phone-progress"><i></i></span></div>
+                <div class="phone-list" aria-hidden="true">
+                  <div class="phone-track">
+                    <div class="stage-card s-engage"><div><b>Engage</b><small>Spark your curiosity</small><i>2 min watch</i></div><img src="assets/thesis/engage.webp" alt="" width="299" height="360" loading="lazy"></div>
+                    <div class="stage-card s-explore"><div><b>Explore</b><small>Discover the elements</small><i>118 elements</i></div><img src="assets/thesis/explore.webp" alt="" width="360" height="323" loading="lazy"></div>
+                    <div class="stage-card s-explain"><div><b>Explain</b><small>Understand reactivity</small><i>Reactivity trends</i></div><img src="assets/thesis/explain.webp" alt="" width="254" height="360" loading="lazy"></div>
+                    <div class="stage-card s-elaborate"><div><b>Elaborate</b><small>Sort the elements</small><i>+100 Atoms</i></div><img src="assets/thesis/elaborate.webp" alt="" width="360" height="295" loading="lazy"></div>
+                    <div class="stage-card s-evaluate"><div><b>Evaluate</b><small>Prove your mastery</small><i>Earn badge</i></div><img src="assets/thesis/evaluate.webp" alt="" width="360" height="336" loading="lazy"></div>
+                    <div class="stage-card s-engage"><div><b>Engage</b><small>Spark your curiosity</small><i>2 min watch</i></div><img src="assets/thesis/engage.webp" alt="" width="299" height="360" loading="lazy"></div>
+                    <div class="stage-card s-explore"><div><b>Explore</b><small>Discover the elements</small><i>118 elements</i></div><img src="assets/thesis/explore.webp" alt="" width="360" height="323" loading="lazy"></div>
+                    <div class="stage-card s-explain"><div><b>Explain</b><small>Understand reactivity</small><i>Reactivity trends</i></div><img src="assets/thesis/explain.webp" alt="" width="254" height="360" loading="lazy"></div>
+                    <div class="stage-card s-elaborate"><div><b>Elaborate</b><small>Sort the elements</small><i>+100 Atoms</i></div><img src="assets/thesis/elaborate.webp" alt="" width="360" height="295" loading="lazy"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="thesis-atomy" src="assets/thesis/atomy.webp" alt="Atomy, the app's mascot, holding Hydrogen and Gold element tiles" width="820" height="633" loading="lazy" data-parallax="-0.08">
+          </div>
+        </div>
+
+        <dl class="thesis-stats" data-stagger>
+          <div><dt>Elements to explore</dt><dd data-count="118">118</dd></div>
+          <div><dt>Learning stages</dt><dd data-count="5">5</dd></div>
+          <div><dt>Periods · groups</dt><dd><span data-count="7">7</span>·<span data-count="18">18</span></dd></div>
+          <div><dt>Quiz questions</dt><dd data-count="12">12</dd></div>
+        </dl>
+
+        <div class="thesis-5e">
+          <div class="thesis-5e-head reveal"><h3>One lesson,<br><em>five stages.</em></h3><p>The app follows the 5E instructional model. Each stage unlocks the next and has its own character, so learners always know where they are in the journey.</p></div>
+          <ol class="five-e" data-stagger>
+            <li class="e-card s-engage" data-tilt><span class="e-num">01</span><img src="assets/thesis/engage.webp" alt="" width="299" height="360" loading="lazy"><h4>Engage</h4><p class="e-sub">Spark your curiosity</p><p>A short video asks why elements are arranged the way they are.</p></li>
+            <li class="e-card s-explore" data-tilt><span class="e-num">02</span><img src="assets/thesis/explore.webp" alt="" width="360" height="323" loading="lazy"><h4>Explore</h4><p class="e-sub">Discover the elements</p><p>Tap through all 118 elements, the 7 periods and the 18 groups.</p></li>
+            <li class="e-card s-explain" data-tilt><span class="e-num">03</span><img src="assets/thesis/explain.webp" alt="" width="254" height="360" loading="lazy"><h4>Explain</h4><p class="e-sub">Understand reactivity</p><p>How electron shells and valence electrons shape each element’s place and behavior.</p></li>
+            <li class="e-card s-elaborate" data-tilt><span class="e-num">04</span><img src="assets/thesis/elaborate.webp" alt="" width="360" height="295" loading="lazy"><h4>Elaborate</h4><p class="e-sub">Sort the elements</p><p>Classify 10 random elements as metal, metalloid or nonmetal to earn Atoms.</p></li>
+            <li class="e-card s-evaluate" data-tilt><span class="e-num">05</span><img src="assets/thesis/evaluate.webp" alt="" width="360" height="336" loading="lazy"><h4>Evaluate</h4><p class="e-sub">Prove your mastery</p><p>Twelve questions across every topic — finish to earn the Explorer badge.</p></li>
+          </ol>
+        </div>
+
+        <div class="thesis-team reveal">
+          <figure class="team-photo" data-tilt><img src="assets/thesis/team.jpg" alt="The three members of the Science Education research team standing in a school corridor" width="756" height="756" loading="lazy"></figure>
+          <div class="team-copy">
+            <span class="eyebrow">MEET THE TEAM</span>
+            <h3>Science Education<br><em>research team.</em></h3>
+            <p>We are research students committed to making science education more accessible, understandable and enjoyable.</p>
+            <dl><div><dt>OUR PURPOSE</dt><dd>Help students explore how elements are arranged in the periodic table through interactive digital tools.</dd></div><div><dt>OUR VISION</dt><dd>Bridge the learning gap in understanding the 7 periods and 18 groups through atomic structure and chemical properties.</dd></div></dl>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="approach" class="approach-section wrap" aria-labelledby="approach-title">
-      <div class="section-topline"><span>02 / MY APPROACH</span><span>LEARNING, WITH INTENTION</span></div>
-      <div class="approach-intro reveal"><h2 id="approach-title">More than knowing.<br><em>Making connections.</em></h2><p>I'm developing a practice that connects scientific curiosity with care for the learner. These are the areas I'm exploring—and the work behind them.</p></div>
+      <div class="section-topline"><span>03 / MY APPROACH</span><span>LEARNING, WITH INTENTION</span></div>
+      <div class="approach-intro reveal"><h2 id="approach-title" data-split>More than knowing.<br><em>Making connections.</em></h2><p>I'm developing a practice that connects scientific curiosity with care for the learner. These are the areas I'm exploring—and the work behind them.</p></div>
       <div class="capability-list">
         <a class="capability reveal" href="work.html?project=science-questioning"><span class="cap-number">01</span><h3>Science learning<br><em>& inquiry</em></h3><p>Exploring how questions, models, and everyday examples help scientific ideas make sense.</p><span class="cap-arrow" aria-hidden="true">↗</span></a>
         <a class="capability reveal" href="work.html?project=classroom-board"><span class="cap-number">02</span><h3>Visual<br><em>communication</em></h3><p>Organizing educational information into clear, welcoming materials with a purpose.</p><span class="cap-arrow" aria-hidden="true">↗</span></a>
@@ -104,20 +179,25 @@
 
     <section id="about" class="about-section" aria-labelledby="about-title">
       <div class="wrap">
-        <div class="section-topline"><span>03 / A LITTLE ABOUT ME</span><span>STILL LEARNING. ALWAYS CURIOUS.</span></div>
-        <div class="about-grid reveal"><div class="about-title-block"><h2 id="about-title">A student of science.<br><em>Always a learner.</em></h2><svg class="about-flower" viewBox="0 0 180 180" aria-hidden="true"><path d="M90 90C-20-18 200-18 90 90C198-20 198 200 90 90C200 198-20 198 90 90C-18 200-18-20 90 90Z"/></svg><span class="about-small">CURIOSITY IS WHERE IT BEGINS.</span></div><div class="about-story"><p class="about-lead">Science has always been my way of asking questions about the world. Education is becoming my way of sharing that curiosity.</p><p>I'm Jewel B. Octa, a Bachelor of Secondary Education student majoring in Science at the University of Camarines Norte. Through Field Study 1, I've been connecting what I learn in college with the realities of the classroom.</p><p>I still remember a Grade 7 science lesson when a teacher's encouragement gave me the confidence to speak up. That experience stays with me: learning is also about feeling safe enough to ask, try, and make mistakes.</p><div class="education-line"><span>MY FOUNDATION</span><p>Science Education<br><strong>University of Camarines Norte</strong></p></div></div></div>
+        <div class="section-topline"><span>04 / A LITTLE ABOUT ME</span><span>STILL LEARNING. ALWAYS CURIOUS.</span></div>
+        <div class="about-grid reveal"><div class="about-title-block"><h2 id="about-title" data-split>A student of science.<br><em>Always a learner.</em></h2><svg class="about-flower" viewBox="0 0 180 180" aria-hidden="true"><path d="M90 90C-20-18 200-18 90 90C198-20 198 200 90 90C200 198-20 198 90 90C-18 200-18-20 90 90Z"/></svg><span class="about-small">CURIOSITY IS WHERE IT BEGINS.</span></div><div class="about-story"><p class="about-lead">Science has always been my way of asking questions about the world. Education is becoming my way of sharing that curiosity.</p><p>I'm Jewel B. Octa, a Bachelor of Secondary Education student majoring in Science at the University of Camarines Norte. Through Field Study 1, I've been connecting what I learn in college with the realities of the classroom.</p><p>I still remember a Grade 7 science lesson when a teacher's encouragement gave me the confidence to speak up. That experience stays with me: learning is also about feeling safe enough to ask, try, and make mistakes.</p><div class="education-line"><span>MY FOUNDATION</span><p>Science Education<br><strong>University of Camarines Norte</strong></p></div></div></div>
         <div class="perspective reveal"><div class="perspective-label">A CHANGE IN<br><em>perspective.</em></div><div><span class="eyebrow">BEFORE FIELD STUDY</span><p>I focused on how clearly a teacher explains a lesson.</p></div><div><span class="eyebrow">WHAT OBSERVATION TAUGHT ME</span><p>Meaningful learning also depends on participation, confidence, and the needs of each learner.</p></div></div>
       </div>
     </section>
 
     <section id="field-notes" class="field-section wrap" aria-labelledby="field-title">
-      <div class="field-intro reveal"><div><span class="eyebrow">THE REST OF THE JOURNEY</span><h2 id="field-title">Notes from<br><em>the classroom.</em></h2></div><p>Sixteen learning episodes. One evolving perspective.<br>Explore the themes that shaped my Field Study 1 experience.</p></div>
+      <div class="field-intro reveal"><div><span class="eyebrow">THE REST OF THE JOURNEY</span><h2 id="field-title" data-split>Notes from<br><em>the classroom.</em></h2></div><p>Sixteen learning episodes. One evolving perspective.<br>Explore the themes that shaped my Field Study 1 experience.</p></div>
+      <a class="compilation-cta reveal" href="episodes.html" data-tilt data-cursor="Open">
+        <span class="compilation-fs" aria-hidden="true">FS 1</span>
+        <span class="compilation-copy"><span class="eyebrow">FIELD STUDY 1 · COMPILATION OF REFLECTIONS</span><strong>Read the manifesto,<br><em>then open each episode.</em></strong></span>
+        <span class="compilation-arrow" aria-hidden="true">↗</span>
+      </a>
       <div class="field-groups" id="field-groups"></div>
       <noscript><p>My field-study reflections explore learners and their contexts, learning environments, science teaching and resources, assessment, and professional growth.</p></noscript>
     </section>
 
     <section id="contact" class="contact-section" aria-labelledby="contact-title">
-      <div class="wrap"><div class="section-topline"><span>04 / THE NEXT CHAPTER</span><a href="#">BACK TO TOP <span aria-hidden="true">↑</span></a></div><h2 id="contact-title" class="contact-display">STILL CURIOUS.</h2><div class="contact-composition"><div class="contact-note"><span class="eyebrow">THERE'S ALWAYS MORE TO LEARN.</span><p>Let's keep<br><em>the conversation<br>growing.</em></p></div><div class="contact-portrait"><img src="assets/myimage2.png" alt="Jewel Octa in her science education uniform" width="1080" height="1920" loading="lazy"></div><div class="contact-action"><svg class="spark" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66"/></svg><p>About science, learning,<br>and the possibilities ahead.</p><a class="contact-button" href="mailto:jewelbocta09@gmail.com">Say hello <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-copy-email>Copy email address <span aria-hidden="true">⧉</span></button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div>
+      <div class="wrap"><div class="section-topline"><span>05 / THE NEXT CHAPTER</span><a href="#">BACK TO TOP <span aria-hidden="true">↑</span></a></div><h2 id="contact-title" class="contact-display" data-parallax="0.12">STILL CURIOUS.</h2><div class="contact-composition"><div class="contact-note"><span class="eyebrow">THERE'S ALWAYS MORE TO LEARN.</span><p>Let's keep<br><em>the conversation<br>growing.</em></p></div><div class="contact-portrait"><img src="assets/myimage2.png" alt="Jewel Octa in her science education uniform" width="1080" height="1920" loading="lazy"></div><div class="contact-action"><svg class="spark" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66"/></svg><p>About science, learning,<br>and the possibilities ahead.</p><a class="contact-button" href="mailto:jewelbocta09@gmail.com" data-magnetic>Say hello <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-copy-email>Copy email address <span aria-hidden="true">⧉</span></button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div>
       <footer class="site-footer wrap"><a class="footer-name" href="#">Jewel B. Octa</a><span>SCIENCE EDUCATION · CAMARINES NORTE</span><a href="mailto:jewelbocta09@gmail.com">jewelbocta09@gmail.com <span aria-hidden="true">↗</span></a><span class="copyright">© <span data-year>2026</span></span></footer>
     </section>
   </main>
